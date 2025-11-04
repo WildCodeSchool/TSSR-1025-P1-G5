@@ -28,8 +28,8 @@
 
 | Membre   | Rôle       | Missions |
 | -------- | ---------- | -------- |
-| membre 1 | PO         | P-J      |
-| membre 2 | SM         | Romain   |
+| P-J      | PO         | -        |
+| Romain   | SM         | -        |
 | membre 3 | Technicien | -        |
 | membre 4 | Technicien | -        |
 
