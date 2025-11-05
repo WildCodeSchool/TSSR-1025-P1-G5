@@ -5,7 +5,9 @@
 
 * Quelques lignes pour expliquer a quoi sert l'analyse et la cartographie.
 
-## Procédure/Objectif
+### Objectif
+ 
+## Procédure
 
 ### Outils
 
