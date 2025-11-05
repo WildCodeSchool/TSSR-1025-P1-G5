@@ -12,12 +12,16 @@
 
 # 🎯 Présentation du projet
 <span id="presentation-du-projet"></span>
-**Sujet choisi**
+**Sujet choisi** 
+
+  * Sujet 6 Analyse et cartographie des ports réseaux
 
 **Présentation**
 
-**Objectifs finaux**
+**Objectifs finaux** 
 
+  * Scanner les ports de plusieurs machines
+  * Récupérer le maximum d'infos
 
 # 📜 Introduction
 <span id="introduction"></span>
@@ -28,8 +32,8 @@
 
 | Membre   | Rôle       | Missions |
 | -------- | ---------- | -------- |
-| membre 1 | PO         | P-J      |
-| membre 2 | SM         | Romain   |
+| P-J      | PO         | -        |
+| Romain   | SM         | -        |
 | membre 3 | Technicien | -        |
 | membre 4 | Technicien | -        |
 
