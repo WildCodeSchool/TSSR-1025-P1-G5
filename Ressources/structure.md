@@ -14,6 +14,7 @@ Exemples classiques :
 | 22   | Connexion sécurisée (SSH) |
 | 443  | Site web sécurisé (HTTPS) |
 | 25   | E-mail (SMTP)             |
+
 Il y a 65 536 ports (de 0 à 65535). 
 Les ports 0–1023 = réservés (IANA), les autres = libres ou personnalisés.
 
