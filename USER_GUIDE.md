@@ -31,7 +31,7 @@
 
 ![CMD_nmap](Ressources/CMD_nmap.PNG)
 
-* Avec la cette commande vous lancerez un scan des 1000 ports les plus courants, des informations apparaitrons :
+* Avec cette commande vous lancerez un scan des 1000 ports les plus courants, des informations apparaîtrons :
 
 * Le nom de la machine cible (Nom + IP)
   
@@ -41,7 +41,7 @@
 
 ![CMD_nmap_détail_ports](Ressources/CMD_nmap_détail_ports.PNG)
 
-On comprend alors que sur les 1000 ports 997 sont fermés et que 3 sont ouverts.
+* Vous comprendrez alors que sur les 1000 ports 997 sont fermés et que 3 sont ouverts.
 
 ### Commande nmap (IP machine) /24
 
@@ -78,10 +78,20 @@ On comprend alors que sur les 1000 ports 997 sont fermés et que 3 sont ouverts.
 ## zenmap
 <span id="zenmap"></span>
 
-Le logiciel zenmap à la même utilité que le nmap, à la difference qu'il propose un service graphique.  
+Le logiciel zenmap a la même utilité que le nmap, à la différence qu'il propose un service graphique.  
 Par exemple :
 
-| 
+| ![CMD_zenmap](Ressources/CMD_zenmap.PNG) |
+| ---------------------------------------- |
+* Commande classique comme avec nmap, vous pouvez cependant taper l'IP dans CIBLE et chosir le type de scan que vous voulez faire. La commande s'écrira toute seule.
+
+| ![résultat_CMD_zenmap](Ressources/résultat_CMD_zenmap.PNG) |
+| ---------------------------------------- |
+* Vous aurez ensuite le résultat du scan qui apparaîtra.
+
+| ![résultat_graphique_CMD_zenmap](Ressources/résultat_graphique_CMD_zenmap.PNG) |
+| ---------------------------------------- |
+* Vous aurez aussi la possibilité d'afficher la topologie du réseau (il n'est pas très grand). Ainsi que bien d'autres informations avec les outils qui vous sont proposés.
 
 ## netcat
 <span id="netcat"></span>
