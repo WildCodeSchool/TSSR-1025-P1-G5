@@ -19,7 +19,7 @@
 
 ## Présentation
 
-### Quoi ?
+### - Quoi ?
 
 Un port réseau est comme une porte numérotée sur un ordinateur ou un appareil connecté au réseau.  
 Chaque service (ex: site web, e-mail, SSH) écoute sur un numéro de port spécifique.
@@ -37,7 +37,7 @@ Exemples classiques :
 * Les ports 0–1023 = réservés (Internet Assigned Numbers Authority)
 * Les autres = libres ou personnalisés.
 
-### Qui ?
+### - Qui ?
 
 | Rôle                                            | Responsabilité                                                                     |
 | ----------------------------------------------- | ---------------------------------------------------------------------------------- |
@@ -46,7 +46,7 @@ Exemples classiques :
 | Pentester / Auditeur cybersécurité              | Utilise Nmap en mode avancé pour tester la sécurité (avec autorisation).           |
 | Équipe NOC (Network Operations Center)          | Utilise des outils comme SolarWinds UDT ou PRTG pour surveiller en continu.        |
 
-### Objectif
+### - Objectif
 
 | Objectif        | Explication                                                                            |
 | --------------- | -------------------------------------------------------------------------------------- |
@@ -56,7 +56,7 @@ Exemples classiques :
 | Surveillance    | Voir qui se connecte où, détecter les appareils suspects (rogue devices).              |
 | Capacité réseau | Voir combien de ports sont utilisés sur un switch → éviter la saturation.              |
 
-### Outils
+### - Outils
 
 
 | Outil          | Type                              | Gratuit ?                         | Usage principal                                                   |
@@ -68,7 +68,7 @@ Exemples classiques :
 | Device42       | Gestion d’infrastructure          | Non                               | Découverte auto, dépendances                                      |
 | Netcat (nc)    | Outil de connexion réseau TCP/UDP | Oui (préinstallé sur Linux/macOS) | Test manuel de port, transfert de fichiers, reverse shell, écoute |
 
-Il est conseillé de commencer par Nmap et Netcat (gratuit + puissant)
+* Il est conseillé de commencer par Nmap et Netcat (gratuit + puissant)
 
 ## Objectifs finaux 
 
