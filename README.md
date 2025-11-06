@@ -66,7 +66,7 @@ Exemples classiques :
 | Spiceworks     | Outil gratuit simple            | Oui                   | Cartographie manuelle basique                         |
 | Device42       | Gestion d’infrastructure        | Non                   | Découverte auto, dépendances                          |
 
-Il est conseillé de commencer par Nmap (gratuit + puissant)
+* Il est conseillé de commencer par Nmap (gratuit + puissant)
 
 
 ## Objectifs finaux 
