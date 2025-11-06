@@ -31,12 +31,17 @@
 
 ![CMD_nmap](Ressources/CMD_nmap.PNG)
 
- * Avec la cette commande vous lancerez un scan des 1000 ports les plus courants, des informations apparaitrons :
+* Avec la cette commande vous lancerez un scan des 1000 ports les plus courants, des informations apparaitrons :
+
 * Le nom de la machine cible (Nom + IP)
-	![[CMD_nmap_détail_nom.png]]
+  
+![CMD_nmap_détail_nom](Ressources/CMD_nmap_détail_nom.PNG)
+
 * Les informations sur les 1000 ports :
-	![[CMD_nmap_détail_ports.png]]
-	On comprend alors que sur les 1000 ports 997 sont fermés et que 3 sont ouverts.
+
+![CMD_nmap_détail_ports](Ressources/CMD_nmap_détail_ports.PNG)
+
+On comprend alors que sur les 1000 ports 997 sont fermés et que 3 sont ouverts.
 
 ### Commande nmap (IP machine) /24
 
