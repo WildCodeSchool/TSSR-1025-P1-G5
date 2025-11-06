@@ -29,7 +29,7 @@
 
 ### Commande nmap (IP cible)
 
-
+![CMD_nmap](Ressources/CMD_nmap.PNG)
 
 * Avec la cette commande vous lancerez un scan des 1000 ports les plus courants, des informations apparaitrons :
 
