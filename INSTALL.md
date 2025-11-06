@@ -8,7 +8,7 @@
 # 1. Prérequis techniques
 
 <span id="prerequis-techniques"></span>
-Nmap est disponible sur la plupart des plateformes,
+Nmap est disponible sur la plupart des plateformes, Netcat est un outil intégré à Nmap. Ncat est le nom sur Windows de Netcat.
 
 # 2. Installation sur le serveur
 
@@ -40,7 +40,7 @@ Pour confirmer que l'installation s'est déroulée correctement, vérifiez la ve
 
 **L'instalation de Zenmap necessite d'avoir préalablement installé Nmap.**
 
-  *Zenmap est l'interface graphique officielle (GUI) pour l'outil de scan de réseau Nmap, conçu pour rendre son utilisation plus accessible aux débutants tout en offrant des fonctionnalités avancées pour les utilisateurs expérimentés.*
+  >Zenmap est l'interface graphique officielle (GUI) pour l'outil de scan de réseau Nmap, conçu pour rendre son utilisation plus accessible aux débutants tout en offrant des fonctionnalités avancées pour les utilisateurs expérimentés.
 
 Pour installer Zenmap : <br><br> `sudo apt install zenmap`
 
