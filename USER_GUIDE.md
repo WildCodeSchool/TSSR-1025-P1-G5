@@ -17,7 +17,7 @@
 
 ## Commande essentiel :
 
-| Commande             | Explication                                                 | Exemple                     |
+| Commande             | Explication                                                 | Exemple                     | 
 | -------------------- | ----------------------------------------------------------- | --------------------------- |
 | `nmap <IP>`          | Scan basique (TCP connect) des 1000 ports les plus courants | `nmap 192.168.1.1`          |
 | `nmap -p 1-100 <IP>` | Scanne les ports 1 à 100                                    | `nmap -p 1-100 192.168.1.1` |
@@ -78,7 +78,10 @@ On comprend alors que sur les 1000 ports 997 sont fermés et que 3 sont ouverts.
 ## zenmap
 <span id="zenmap"></span>
 
-Le logiciel zenmap à la même utilité que la c
+Le logiciel zenmap à la même utilité que le nmap, à la difference qu'il propose un service graphique.  
+Par exemple :
+
+| 
 
 ## netcat
 <span id="netcat"></span>
