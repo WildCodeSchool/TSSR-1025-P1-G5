@@ -114,7 +114,7 @@ La machine va se connecter sur le port 1234 de la machine en écoute dont l'adre
 Il est alors possible possible de "chatter" via le terminal.
 
 
-![capture1](Ressources/Capture 1.png)
+![capture1](Ressources/Capture_1.png)
 
 ### Transfert de fichier entre deux machines
 Reprenons la même configuration de deux machines.
@@ -143,7 +143,7 @@ Pour scanner une plage de port sur une plage définie :
 
 ici le scan va s'éffectuer sur les ports 1 à 140.
 
-![capture2](Ressources/Capture 2.png)
+![capture2](Ressources/Capture_2.png)
 
 
 # 2. Utilisation avancée
