@@ -12,12 +12,16 @@
 
 # 🎯 Présentation du projet
 <span id="presentation-du-projet"></span>
-**Sujet choisi**
+**Sujet choisi** 
+
+  * Sujet 6 Analyse et cartographie des ports réseaux
 
 **Présentation**
 
-**Objectifs finaux**
+**Objectifs finaux** 
 
+  * Scanner les ports de plusieurs machines
+  * Récupérer le maximum d'infos
 
 # 📜 Introduction
 <span id="introduction"></span>
