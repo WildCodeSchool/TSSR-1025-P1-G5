@@ -7,7 +7,13 @@
 - [👥 Membres du groupe par sprint](#membres-du-groupe-par-sprint)
 - [⚙️ Choix Techniques](#choix-techniques)
 - [🧗Difficultés rencontrées](#difficultes-rencontrees)
+
+ Installation de Zenmap dificile 
+
 - [💡 Solutions trouvées](#solutions-trouvees)
+
+Recherche de solutions sur le git-hub du logiciel
+
 - [🚀 Améliorations possibles](#ameliorations-possibles)
 
 # 🎯 Présentation du projet
