@@ -21,7 +21,8 @@
 
 ### Quoi ?
 
-Un port réseau est comme une porte numérotée sur un ordinateur ou un appareil connecté au réseau. Chaque service (ex: site web, e-mail, SSH) écoute sur un numéro de port spécifique.
+Un port réseau est comme une porte numérotée sur un ordinateur ou un appareil connecté au réseau.  
+Chaque service (ex: site web, e-mail, SSH) écoute sur un numéro de port spécifique.
 
 Exemples classiques :
 
@@ -32,8 +33,9 @@ Exemples classiques :
 | 443  | Site web sécurisé (HTTPS) |
 | 25   | E-mail (SMTP)             |
 
-Il y a 65 536 ports (de 0 à 65535). 
-Les ports 0–1023 = réservés (IANA), les autres = libres ou personnalisés.
+* Il y a 65 536 ports (de 0 à 65535).
+* Les ports 0–1023 = réservés (Internet Assigned Numbers Authority)
+* Les autres = libres ou personnalisés.
 
 ### Qui ?
 
