@@ -85,6 +85,53 @@ On comprend alors que sur les 1000 ports 997 sont fermés et que 3 sont ouverts.
 
 
 
+### Communiquer du texte entre deux machines
+Dans cet exemple la première machine client (en écoute) est sur Ubuntu. Tapez la commande :
+
+`nc -l -p 1234`
+
+La machine Ubuntu va écouter sur le port 1234
+
+Sur la deuxième machine sous Windows, tapez la commande :
+
+`ncat 176.16.10.XXX 1234`
+
+La machine va se connecter sur le port 1234 de la machine en écoute dont l'adresse IP est 176.16.10.XXX
+
+Il est alors possible possible de "chatter" via le terminal.
+
+
+---image capture 1
+
+### Transfert de fichier entre deux machines
+Reprenons la même configuration de deux machines.
+
+Sur la machine en écoute :
+
+`nc -l -p 1234 < fichier_a_envoyer.txt`
+
+Sur la machine distante :
+
+`nc 172.16.10.XXX 1234 > fichier_recu.txt`
+
+### Vérifier si un port est ouvert
+
+La commande suivante va permettre de scanner une machine en spécifiant le port à vérifier :
+
+`ncat -zv  176.16.10.XXX 22`
+
+ici le port à vérifier est le 22 (service SSH).  
+l'option `-z` active le mode scan et ne transmet pas de données.  
+l'option `-v` pour verbeux, affiche des détails
+
+Pour scanner une plage de port sur une plage définie :
+
+`nc -zv 176.16.10.XXX 1-140`
+
+ici le scan va s'éffectuer sur les ports 1 à 140.
+
+---image capture 2
+
 
 # 2. Utilisation avancée
 <span id="utilisation-avancee"></span>
