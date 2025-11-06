@@ -1,28 +1,10 @@
-![logo de la Wild Code SChool en exemple](Ressources/logo_WCS.jpg)
-
-## Sommaire 
-
-- [🎯 Présentation du projet](#presentation-du-projet)
-- [📜 Introduction](#introduction)
-- [👥 Membres du groupe par sprint](#membres-du-groupe-par-sprint)
-- [⚙️ Choix Techniques](#choix-techniques)
-- [🧗Difficultés rencontrées](#difficultes-rencontrees)
-- [💡 Solutions trouvées](#solutions-trouvees)
-- [🚀 Améliorations possibles](#ameliorations-possibles)
-
-# 🎯 Présentation du projet
-<span id="presentation-du-projet"></span>
-
-## Sujet choisi
-
-  * Sujet 6 Analyse et cartographie des ports réseaux
+# Analyse et Cartographie des ports réseaux
 
 ## Présentation
 
 ### Quoi ?
 
-Un port réseau est comme une porte numérotée sur un ordinateur ou un appareil connecté au réseau.  
-Chaque service (ex: site web, e-mail, SSH) écoute sur un numéro de port spécifique.
+Un port réseau est comme une porte numérotée sur un ordinateur ou un appareil connecté au réseau. Chaque service (ex: site web, e-mail, SSH) écoute sur un numéro de port spécifique.
 
 Exemples classiques :
 
@@ -33,9 +15,8 @@ Exemples classiques :
 | 443  | Site web sécurisé (HTTPS) |
 | 25   | E-mail (SMTP)             |
 
-* Il y a 65 536 ports (de 0 à 65535).
-* Les ports 0–1023 = réservés (Internet Assigned Numbers Authority)
-* Les autres = libres ou personnalisés.
+Il y a 65 536 ports (de 0 à 65535). 
+Les ports 0–1023 = réservés (IANA), les autres = libres ou personnalisés.
 
 ### Qui ?
 
@@ -67,62 +48,3 @@ Exemples classiques :
 | Device42       | Gestion d’infrastructure        | Non                   | Découverte auto, dépendances                          |
 
 Il est conseillé de commencer par Nmap (gratuit + puissant)
-
-
-## Objectifs finaux 
-
-  * Scanner les ports de plusieurs machines
-  * Récupérer le maximum d'infos
-
-# 📜 Introduction
-<span id="introduction"></span>
-
-# 👥 Membres du groupe par sprint
-<span id="membres-du-groupe-par-sprint"></span>
-**Sprint 1**
-
-| Membre   | Rôle       | Missions |
-| -------- | ---------- | -------- |
-| P-J      | PO         | -        |
-| Romain   | SM         | -        |
-| membre 3 | Technicien | -        |
-| membre 4 | Technicien | -        |
-
-**Sprint 2**
-
-| Membre   | Rôle       | Missions |
-| -------- | ---------- | -------- |
-| membre 1 | Technicien | -        |
-| membre 2 | Technicien | -        |
-| membre 3 | PO         | -        |
-| membre 4 | SM         | -        |
-
-# ⚙️ Choix techniques
-<span id="choix-techniques"></span>
-
-**Matériel**
-* VM :
-  
-   * Ubuntu
-   * Windows Client
-   * Windows Serveur
-   * Serveur Debian
- 
-**Logiciel**
-
-* nmap
-* zenmap
-* netcat
-
-# 🧗 Difficultés rencontrées
-<span id="difficultes-rencontrees"></span>
-
-* Installation de Zenmap dificile 
-
-# 💡 Solutions trouvées
-<span id="solutions-trouvees"></span>
-
-* Recherche de solutions sur le git-hub du logiciel
-
-# 🚀 Améliorations possibles
-<span id="ameliorations-possibles"></span>

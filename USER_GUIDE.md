@@ -1,35 +1,122 @@
 ## Sommaire
 
 1. [Utilisation de base](#utilisation-de-base)
-
-
+      * [nmap](#nmap)
+      * [zenmap](#zenmap)
+      * [netcat](#netcat)
 2. [Utilisation avancée](#utilisation-avancee)
 3. [FAQ](#faq)
+
 
 # 1. Utilisation de base
 <span id="utilisation-de-base"></span>
 
-## Utilisation de base de Netcat(Linux)/Ncat(Windows)
+
+## nmap
+<span id="nmap"></span>
+
+## Commande essentiel :
+
+| Commande             | Explication                                                 | Exemple                     | 
+| -------------------- | ----------------------------------------------------------- | --------------------------- |
+| `nmap <IP>`          | Scan basique (TCP connect) des 1000 ports les plus courants | `nmap 192.168.1.1`          |
+| `nmap -p 1-100 <IP>` | Scanne les ports 1 à 100                                    | `nmap -p 1-100 192.168.1.1` |
+| `nmap -p- <IP>`      | Tous les ports (1 à 65535) – lent mais complet              | `nmap -p- 192.168.1.1`      |
+| `nmap -sS <IP>`      | SYN scan (plus rapide, furtif, nécessite root)              | `sudo nmap -sS 192.168.1.1` |
+| `nmap -sV <IP>`      | Détecte version des services (ex: Apache 2.4.41)            | `nmap -sV 192.168.1.1`      |
+
+## Utilisation :
+
+### Commande nmap (IP cible)
+
+![CMD_nmap](Ressources/CMD_nmap.PNG)
+
+* Avec cette commande vous lancerez un scan des 1000 ports les plus courants, des informations apparaîtrons :
+
+* Le nom de la machine cible (Nom + IP)
+  
+![CMD_nmap_détail_nom](Ressources/CMD_nmap_détail_nom.PNG)
+
+* Les informations sur les 1000 ports :
+
+![CMD_nmap_détail_ports](Ressources/CMD_nmap_détail_ports.PNG)
+
+* Vous comprendrez alors que sur les 1000 ports 997 sont fermés et que 3 sont ouverts.
+
+### Commande nmap (IP machine) /24
+
+| ![CMD_nmap_balayage](Ressources/CMD_nmap_balayage.PNG) | ![CMD_nmap_balayage_2](Ressources/CMD_nmap_balayage_2.PNG) |
+| ------------------------------------------------------ | ---------------------------------------------------------- |
+
+* Avec cette commande vous lancerez un balayage du réseau pour savoir quels machine (actives) sont connectés au réseau, ainsi que les ports ouverts sur les différentes machines.
+
+| Élément               | Signification                 | Détail                                                                                           |
+| --------------------- | ----------------------------- | ------------------------------------------------------------------------------------------------ |
+|   `nmap`              | Nom du programme              | Outil de scan réseau                                                                             |
+|   `172.16.10.20/24`   | Plage d’adresses IP à scanner | C’est tout le réseau local :     de `172.16.10.0` à  `172.16.10.255`     → 256 adresses.         |
+|   `/24`               | Notation CIDR*                | Signifie : les 24 premiers bits de l’IP sont fixes → les 8 derniers bits varient (2⁸ = 256 IPs). |
+
+* Le CIDR permet aux routeurs d'organiser plus efficacement les adresses IP en plusieurs sous-réseaux.
+
+### Les options :
+
+| Option     | Rôle                                                | Exemple                                   |
+| ---------- | --------------------------------------------------- | ----------------------------------------- |
+| `-p`       | Spécifie les ports                                  | `-p 22,80,443` ou `-p 1-1000`             |
+| `-sS`      | SYN scan (rapide, furtif) → root requis             | `sudo nmap -sS 192.168.1.1`               |
+| `-sT`      | TCP connect scan (sans root)                        | `nmap -sT 192.168.1.1`                    |
+| `-sU`      | Scan UDP (lent, mais utile)                         | `sudo nmap -sU -p 53,123,161 192.168.1.1` |
+| `-sV`      | Détection de version                                | `nmap -sV 192.168.1.1`                    |
+| `-O`       | Détection d’OS (doit être root)                     | `sudo nmap -O 192.168.1.1`                |
+| `-A`       | Scan agressif : version + OS + scripts + traceroute | `sudo nmap -A 192.168.1.1`                |
+| `--reason` | Montre pourquoi un port est ouvert/fermé            | `nmap --reason 192.168.1.1`               |
+| `-v`       | Mode verbeux (plus d’infos)                         | `nmap -v 192.168.1.1`                     |
+| `-vv`      | Très verbeux                                        |                                           |
+
+
+
+## zenmap
+<span id="zenmap"></span>
+
+Le logiciel zenmap a la même utilité que le nmap, à la différence qu'il propose un service graphique.  
+Par exemple :
+
+| ![CMD_zenmap](Ressources/CMD_zenmap.PNG) |
+| ---------------------------------------- |
+* Commande classique comme avec nmap, vous pouvez cependant taper l'IP dans CIBLE et chosir le type de scan que vous voulez faire. La commande s'écrira toute seule.
+
+| ![résultat_CMD_zenmap](Ressources/résultat_CMD_zenmap.PNG) |
+| ---------------------------------------- |
+* Vous aurez ensuite le résultat du scan qui apparaîtra.
+
+| ![résultat_graphique_CMD_zenmap](Ressources/résultat_graphique_CMD_zenmap.PNG) |
+| ---------------------------------------- |
+* Vous aurez aussi la possibilité d'afficher la topologie du réseau (il n'est pas très grand). Ainsi que bien d'autres informations avec les outils qui vous sont proposés.
+
+## netcat
+<span id="netcat"></span>
+
+
 
 ### Communiquer du texte entre deux machines
-
-Dans cet exemple la première machine client (en écoute) est sur Ubuntu.
-Tapez la commande :
+Dans cet exemple la première machine client (en écoute) est sur Ubuntu. Tapez la commande :
 
 `nc -l -p 1234`
 
->La machine Ubuntu va écouter sur le port 1234
+La machine Ubuntu va écouter sur le port 1234
 
 Sur la deuxième machine sous Windows, tapez la commande :
 
-`ncat 176.16.10.XXX 1234` 
+`ncat 176.16.10.XXX 1234`
 
->La machine va se connecter sur le port 1234 de la machine en écoute dont l'adresse IP est 176.16.10.XXX
+La machine va se connecter sur le port 1234 de la machine en écoute dont l'adresse IP est 176.16.10.XXX
 
 Il est alors possible possible de "chatter" via le terminal.
 
-### Transfert de fichier entre deux machines
 
+![capture1](Ressources/Capture_1.png)
+
+### Transfert de fichier entre deux machines
 Reprenons la même configuration de deux machines.
 
 Sur la machine en écoute :
@@ -40,9 +127,23 @@ Sur la machine distante :
 
 `nc 172.16.10.XXX 1234 > fichier_recu.txt`
 
+### Vérifier si un port est ouvert
 
+La commande suivante va permettre de scanner une machine en spécifiant le port à vérifier :
 
+`ncat -zv  176.16.10.XXX 22`
 
+ici le port à vérifier est le 22 (service SSH).  
+l'option `-z` active le mode scan et ne transmet pas de données.  
+l'option `-v` pour verbeux, affiche des détails
+
+Pour scanner une plage de port sur une plage définie :
+
+`nc -zv 176.16.10.XXX 1-140`
+
+ici le scan va s'éffectuer sur les ports 1 à 140.
+
+![capture2](Ressources/Capture_2.png)
 
 
 # 2. Utilisation avancée
