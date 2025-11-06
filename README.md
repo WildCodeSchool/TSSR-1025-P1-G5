@@ -58,16 +58,17 @@ Exemples classiques :
 
 ### Outils
 
-| Outil          | Type                            | Gratuit ?             | Usage principal                                       |
-| -------------- | ------------------------------- | --------------------- | ----------------------------------------------------- |
-| Nmap           | Scanner de ports & cartographie | Oui (open source)     | Découvrir les appareils, ports ouverts, services, OS  |
-| SolarWinds UDT | Outil pro de suivi              | Non (essai 30j)       | Suivi des utilisateurs, ports, alertes, arrêt de port |
-| Paessler PRTG  | Surveillance tout-en-un         | Oui (version limitée) | Cartes, alertes, statut en temps réel                 |
-| Spiceworks     | Outil gratuit simple            | Oui                   | Cartographie manuelle basique                         |
-| Device42       | Gestion d’infrastructure        | Non                   | Découverte auto, dépendances                          |
 
-* Il est conseillé de commencer par Nmap (gratuit + puissant)
+| Outil          | Type                              | Gratuit ?                         | Usage principal                                                   |
+| -------------- | --------------------------------- | --------------------------------- | ----------------------------------------------------------------- |
+| Nmap           | Scanner de ports & cartographie   | Oui (open source)                 | Découvrir les appareils, ports ouverts, services, OS              |
+| SolarWinds UDT | Outil pro de suivi                | Non (essai 30j)                   | Suivi des utilisateurs, ports, alertes, arrêt de port             |
+| Paessler PRTG  | Surveillance tout-en-un           | Oui (version limitée)             | Cartes, alertes, statut en temps réel                             |
+| Spiceworks     | Outil gratuit simple              | Oui                               | Cartographie manuelle basique                                     |
+| Device42       | Gestion d’infrastructure          | Non                               | Découverte auto, dépendances                                      |
+| Netcat (nc)    | Outil de connexion réseau TCP/UDP | Oui (préinstallé sur Linux/macOS) | Test manuel de port, transfert de fichiers, reverse shell, écoute |
 
+Il est conseillé de commencer par Nmap et Netcat (gratuit + puissant)
 
 ## Objectifs finaux 
 
