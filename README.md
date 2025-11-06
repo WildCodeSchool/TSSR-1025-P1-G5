@@ -21,7 +21,7 @@
 
 ### Quoi ?
 
-Un port réseau est comme une porte numérotée sur un ordinateur ou un appareil connecté au réseau. 
+Un port réseau est comme une porte numérotée sur un ordinateur ou un appareil connecté au réseau.  
 Chaque service (ex: site web, e-mail, SSH) écoute sur un numéro de port spécifique.
 
 Exemples classiques :
