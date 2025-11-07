@@ -4,7 +4,6 @@
 ## Sommaire 
 
 - [🎯 Présentation du projet](#presentation-du-projet)
-- [📜 Introduction](#introduction)
 - [👥 Membres du groupe par sprint](#membres-du-groupe-par-sprint)
 - [⚙️ Choix Techniques](#choix-techniques)
 - [🧗Difficultés rencontrées](#difficultes-rencontrees)
@@ -75,9 +74,6 @@ Exemples classiques :
 
   * Scanner les ports de plusieurs machines
   * Récupérer le maximum d'infos
-
-# 📜 Introduction
-<span id="introduction"></span>
 
 # 👥 Membres du groupe par sprint
 <span id="membres-du-groupe-par-sprint"></span>
