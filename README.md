@@ -1,4 +1,5 @@
-![logo de la Wild Code SChool en exemple](Ressources/logo_WCS.jpg)
+|![Logo_nmap](Ressources/Logo_nmap.PNG)|![Logo_netcat](Ressources/Logo_netcat.PNG)|
+| ------------------------------------ | ---------------------------------------- |
 
 ## Sommaire 
 
