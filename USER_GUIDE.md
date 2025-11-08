@@ -48,7 +48,7 @@
 | ![CMD_nmap_balayage](Ressources/CMD_nmap_balayage.PNG) | ![CMD_nmap_balayage_2](Ressources/CMD_nmap_balayage_2.PNG) |
 | ------------------------------------------------------ | ---------------------------------------------------------- |
 
-* Avec cette commande vous lancerez un balayage du réseau pour savoir quels machine (actives) sont connectés au réseau, ainsi que les ports ouverts sur les différentes machines.
+* Avec cette commande vous lancerez un balayage du réseau pour savoir quelles machines (actives) sont connectées au réseau, ainsi que les ports ouverts sur les différentes machines.
 
 | Élément               | Signification                 | Détail                                                                                           |
 | --------------------- | ----------------------------- | ------------------------------------------------------------------------------------------------ |
