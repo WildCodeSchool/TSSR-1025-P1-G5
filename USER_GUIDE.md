@@ -142,6 +142,7 @@ Pour scanner une plage de port sur une plage définie :
 `nc -zv 176.16.10.XXX 1-140`
 
 ici le scan va s'éffectuer sur les ports 1 à 140.
+Un message affichera la reussite si un port est ouvert.
 
 ![capture2](Ressources/Capture_2.png)
 
@@ -165,10 +166,11 @@ Voici la description des options présentes :
 | `-A`       | Active plusieurs options de détection comme `-O` pour l'OS, et`-sV` pour détection des versions de service et traceroute                                                                                                                                                                                                                                                                                                                                                                    |
 | `-v`       | Active le mode " verbeux " qui affiche des informations détaillés pendant le scan.                                                                                                                                                                                                                                                                                                                                                                                             |
 | `-P..`     | Envoi des paquets vers des ports spécifiques                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| `-g 53`    | Force Nmap à utiliser le port source 53 (port DNS). Certains pare-feu malconfiguratés font confiance aux paquets provenant du port 53, pensant qu'ils viennent de requêtes DNS légitimes.                                                                                                                                                                                                                                                                                      |
+| `-g 53`    | Force Nmap à utiliser le port source 53 (port DNS). Certains pare-feu mal configurés font confiance aux paquets provenant du port 53, pensant qu'ils viennent de requêtes DNS légitimes.                                                                                                                                                                                                                                                                                      |
 | `-PY`      | Envoie des paquets SCTP (Stream Control Transmission Protocol) pour la découverte d'hôte. Moins courant que TCP/UDP, mais utile dans certains environnements spécialisés.                                                                                                                                                                                                                                                                                                      |
 | `--script` | **`default`** : scripts de reconnaissance générale considérés comme sûrs et utiles<br>**`discovery`** : scripts spécialisés dans la découverte de services et d'informations réseau<br>**`safe`** : scripts **non-intrusifs** qui ne risquent pas de planter des services ou d'endommager les systèmes<br><br>Cette combinaison `default or (discovery and safe)` signifie : exécuter tous les scripts "default" OU tous les scripts qui sont à la fois "discovery" ET "safe". |
 
+On obtient ainsi la liste complète des hôtes actifs sur le segment scanné, même ceux qui ne répondent pas aux pings classiques grâce à la combinaison de techniques de découverte.
 
 Les informations receuillies sont filtrables dans Zenmap selon l'hôte scanné ou les srevices découvert (affiche les ports correspondant)  :
 
@@ -176,18 +178,37 @@ Les informations receuillies sont filtrables dans Zenmap selon l'hôte scanné o
 
 ![capture1cmplet](Ressources/Capture_scan_complet2.png)
 
-On obtiens la liste complète des hôtes actifs sur le segment scanné, même ceux qui ne répondent pas aux pings classiques grâce à la combinaison de techniques de découverte.
 
-Il est alors possible d'identifier les failles techniques (versions vulnérables, ou non mises à jour, services mal configurés, ports ouverts inutiles)
+
+Dans l'onglet resultats, il est alors possible de détecter des failles techniques (versions vulnérables, ou non mises à jour, services mal configurés, ports ouverts inutiles).
+
+
+
+
+Si l'on s'intéresse à notre machine sous Windows (172.16.10.10) On peut remarquer les riques suivant :
+
+* Le port 135 est ouvert.
+> Le port 135 est historiquement une cible privilégiée pour les attaques, notamment en raison de vulnérabilités passées comme celles exploitées par le ver Blaster ou le ransomware WannaCry, qui ont utilisé des failles pour se propager à grande échelle.  Bien qu'il soit nécessaire pour faciliter les communications à distance entre applications et services, l'ouverture du port 135 sur le réseau expose le système à des risques de sécurité significatifs.
+
+* De nombreux ports UDP sont ouverts avec des services inconnus
+
+|                                                    |                                                    |
+| -------------------------------------------------- | -------------------------------------------------- |
+| ![capture1cmplet](Ressources/Capture_scanZen3.png) | ![capture1cmplet](Ressources/Capture_scanZen4.png) |
+
+
+Si l'on s'intéresse à notre machine sous Debian (172.16.10.6)
+
+* Un serveur SSH (port 22) est ouvert et non filtré par un parefeu. On remarque aussi que des algorithmes de securité sont identifiés comme vulnérables.
+
+>Il s'agit ici de l'algorithme HMAC-SHA1. SHA-1 est considéré comme affaibli. Il faudrait restreindre la négociation aux seuls algorithmes avec SHA-2 et désactiver le support SHA-1.
+
+
+
+
 
 
 # Utilisation avancée netact
-
-# Attaque
-
-`-l`: Enables listen mode, allowing Netcat to listen for incoming connections rather than initiating a connection
-
-- `-n`: Prevents DNS or service lookups, using only numeric IP addresses.
 
 
 
