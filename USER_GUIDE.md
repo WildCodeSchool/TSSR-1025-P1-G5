@@ -149,5 +149,48 @@ ici le scan va s'éffectuer sur les ports 1 à 140.
 # 2. Utilisation avancée
 <span id="utilisation-avancee"></span>
 
+## Audit complet du réseau avec Nmap
+Il est possible d'utiliser un **"slow comprehensive scan"** via Zenmap.
+Cette commande est à utiliser avec Zenmap pour plus de praticité. Le scan peut durer plusieurs dizaines de minutes.
+
+`nmap -sS -sU -T4 -A -v -PE -PP -PS80,443 -PA3389 -PU40125 -PY -g 53 --script "default or (discovery and safe)" 172.16.10.10/24`
+
+Voici la description des options présentes :
+
+| Options    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `-sS`      |SYN scan (rapide, furtif) → root requis"                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| `-sU`      | Lance un scan des ports UDP                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| `-T4`      | Modèle de timing agressif. Rapide mais détectable. Ne dépasse pas 10 ms par port TCP                                                                                                                                                                                                                                                                                                                                                                                           |
+| `-A`       | Active plusieurs options de détection comme `-O` pour l'OS, et`-sV` pour détection des versions de service et traceroute                                                                                                                                                                                                                                                                                                                                                                    |
+| `-v`       | Active le mode " verbeux " qui affiche des informations détaillés pendant le scan.                                                                                                                                                                                                                                                                                                                                                                                             |
+| `-P..`     | Envoi des paquets vers des ports spécifiques                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| `-g 53`    | Force Nmap à utiliser le port source 53 (port DNS). Certains pare-feu malconfiguratés font confiance aux paquets provenant du port 53, pensant qu'ils viennent de requêtes DNS légitimes.                                                                                                                                                                                                                                                                                      |
+| `-PY`      | Envoie des paquets SCTP (Stream Control Transmission Protocol) pour la découverte d'hôte. Moins courant que TCP/UDP, mais utile dans certains environnements spécialisés.                                                                                                                                                                                                                                                                                                      |
+| `--script` | **`default`** : scripts de reconnaissance générale considérés comme sûrs et utiles<br>**`discovery`** : scripts spécialisés dans la découverte de services et d'informations réseau<br>**`safe`** : scripts **non-intrusifs** qui ne risquent pas de planter des services ou d'endommager les systèmes<br><br>Cette combinaison `default or (discovery and safe)` signifie : exécuter tous les scripts "default" OU tous les scripts qui sont à la fois "discovery" ET "safe". |
+
+
+Les informations receuillies sont filtrables dans Zenmap selon l'hôte scanné ou les srevices découvert (affiche les ports correspondant)  :
+
+![capture1cmplet](Ressources/Capture_scan_complet1.png)
+
+![capture1cmplet](Ressources/Capture_scan_complet2.png)
+
+On obtiens la liste complète des hôtes actifs sur le segment scanné, même ceux qui ne répondent pas aux pings classiques grâce à la combinaison de techniques de découverte.
+
+Il est alors possible d'identifier les failles techniques (versions vulnérables, ou non mises à jour, services mal configurés, ports ouverts inutiles)
+
+
+# Utilisation avancée netact
+
+# Attaque
+
+`-l`: Enables listen mode, allowing Netcat to listen for incoming connections rather than initiating a connection
+
+- `-n`: Prevents DNS or service lookups, using only numeric IP addresses.
+
+
+
+
 # 3. FAQ
 <span id="faq"></span>
