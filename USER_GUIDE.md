@@ -5,6 +5,7 @@
       * [zenmap](#zenmap)
       * [netcat](#netcat)
 2. [Utilisation avancée](#utilisation-avancee)
+      * [netcat avancé](#netcat-avance)
 3. [FAQ](#faq)
 
 
@@ -148,6 +149,21 @@ ici le scan va s'éffectuer sur les ports 1 à 140.
 
 # 2. Utilisation avancée
 <span id="utilisation-avancee"></span>
+
+## netcat avancé
+<span id="netcat-avance"></span>
+
+### Transfert de fichier entre deux machines
+
+
+Sur la machine en écoute :
+
+`nc -l -p 1234 < fichier_a_envoyer.txt`
+
+Sur la machine distante :
+
+`nc 172.16.10.XXX 1234 > fichier_recu.txt`
+
 
 # 3. FAQ
 <span id="faq"></span>
