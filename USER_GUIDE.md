@@ -48,7 +48,7 @@
 | ![CMD_nmap_balayage](Ressources/CMD_nmap_balayage.PNG) | ![CMD_nmap_balayage_2](Ressources/CMD_nmap_balayage_2.PNG) |
 | ------------------------------------------------------ | ---------------------------------------------------------- |
 
-* Avec cette commande vous lancerez un balayage du réseau pour savoir quels machine (actives) sont connectés au réseau, ainsi que les ports ouverts sur les différentes machines.
+* Avec cette commande vous lancerez un balayage du réseau pour savoir quelles machines (actives) sont connectées au réseau, ainsi que les ports ouverts sur les différentes machines.
 
 | Élément               | Signification                 | Détail                                                                                           |
 | --------------------- | ----------------------------- | ------------------------------------------------------------------------------------------------ |
@@ -97,6 +97,53 @@ Par exemple :
 <span id="netcat"></span>
 
 
+
+### Communiquer du texte entre deux machines
+Dans cet exemple la première machine client (en écoute) est sur Ubuntu. Tapez la commande :
+
+`nc -l -p 1234`
+
+La machine Ubuntu va écouter sur le port 1234
+
+Sur la deuxième machine sous Windows, tapez la commande :
+
+`ncat 176.16.10.XXX 1234`
+
+La machine va se connecter sur le port 1234 de la machine en écoute dont l'adresse IP est 176.16.10.XXX
+
+Il est alors possible possible de "chatter" via le terminal.
+
+
+![capture1](Ressources/Capture_1.png)
+
+### Transfert de fichier entre deux machines
+Reprenons la même configuration de deux machines.
+
+Sur la machine en écoute :
+
+`nc -l -p 1234 < fichier_a_envoyer.txt`
+
+Sur la machine distante :
+
+`nc 172.16.10.XXX 1234 > fichier_recu.txt`
+
+### Vérifier si un port est ouvert
+
+La commande suivante va permettre de scanner une machine en spécifiant le port à vérifier :
+
+`ncat -zv  176.16.10.XXX 22`
+
+ici le port à vérifier est le 22 (service SSH).  
+l'option `-z` active le mode scan et ne transmet pas de données.  
+l'option `-v` pour verbeux, affiche des détails
+
+Pour scanner une plage de port sur une plage définie :
+
+`nc -zv 176.16.10.XXX 1-140`
+
+ici le scan va s'éffectuer sur les ports 1 à 140.
+
+![capture2](Ressources/Capture_2.png)
 
 
 # 2. Utilisation avancée

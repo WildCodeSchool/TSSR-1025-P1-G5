@@ -1,20 +1,15 @@
 ## Sommaire
 
 1. [Prérequis technique](#prerequis-technique)
-2. [Installation sur le serveur](#installation-sur-le-serveur)
-3. [Installation sur le client](#installation-sur-le-client)
-4. [FAQ](#faq)
+2. [Installation sur le client](#installation-sur-le-client)
+3. [FAQ](#faq)
 
 # 1. Prérequis techniques
 
 <span id="prerequis-techniques"></span>
 Nmap est disponible sur la plupart des plateformes, Netcat est un outil intégré à Nmap. Ncat est le nom sur Windows de Netcat.
 
-# 2. Installation sur le serveur
-
-<span id="installation-sur-le-serveur"></span>
-
-# 3. Installation sur le client
+# 2. Installation sur le client
 
 <span id="installation-sur-le-client"></span>
 
@@ -58,7 +53,7 @@ Pour vérifier sa présence utilisez la commande suivante : <br><br>
 
 
 
-# 4. FAQ
+# 3. FAQ
 
 <span id="faq"></span>
 * Quelles sont les différences entre Nmap et Netcat ?
