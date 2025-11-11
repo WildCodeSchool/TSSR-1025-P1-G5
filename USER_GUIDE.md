@@ -156,13 +156,27 @@ ici le scan va s'éffectuer sur les ports 1 à 140.
 ### Transfert de fichier entre deux machines
 
 
-Sur la machine en écoute :
+### Sur la machine qui émet :
 
-`nc -l -p 1234 < fichier_a_envoyer.txt`
+|![CMD_netcat_echange](Ressources/CMD_netcat_echange.PNG)|
+| ------------------------------------------------------ |
 
-Sur la machine distante :
+* La commande `nc -l -p 1234 < fichier_a_envoyer.txt` envoie le fichier choisi dans le port nouvellement ouvert.
 
-`nc 172.16.10.XXX 1234 > fichier_recu.txt`
+|![CMD_netcat_echange_4](Ressources/CMD_netcat_echange_4.PNG)|
+| ---------------------------------------------------------- |
+
+* Vous pouvez constater que le port est bien ouvert.
+* La connexion peut être établie.
+
+### Sur la machine qui reçoit :
+
+|![CMD_netcat_echange_2](Ressources/CMD_netcat_echange_2.PNG)|
+| ---------------------------------------------------------- |
+|![CMD_netcat_echange_3](Ressources/CMD_netcat_echange_3.PNG)|
+
+* La commande `nc 172.16.10.XXX 1234 > fichier_recu.txt` reçoit le fichier depuis le port ouvert.
+* Maintenant que la connexion a été établie d'autres echange peuvent être effectué.
 
 
 # 3. FAQ
