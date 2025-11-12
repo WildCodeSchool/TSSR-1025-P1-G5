@@ -205,6 +205,10 @@ Si l'on s'intéresse à notre machine sous Debian (172.16.10.6)
 
 
 
+## Utilisation de script avec nmap
+
+Il est possible de préparer un script pour choisir son type de scan
+
 
 
 
