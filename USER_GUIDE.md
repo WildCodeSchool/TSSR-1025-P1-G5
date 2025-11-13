@@ -5,8 +5,9 @@
       * [zenmap](#zenmap)
       * [netcat](#netcat)
 2. [Utilisation avancée](#utilisation-avancee)
+      * [nmap avancé](#nmap-avance)
       * [netcat avancé](#netcat-avance)
-3. [FAQ](#faq)
+3. [Pour les pros](#pour-les-pros)
 
 
 # 1. Utilisation de base
@@ -95,7 +96,7 @@ Par exemple :
 * Vous aurez aussi la possibilité d'afficher la topologie du réseau (il n'est pas très grand). Ainsi que bien d'autres informations avec les outils qui vous sont proposés.
 
 
-## Audit complet du réseau avec Nmap
+## Audit complet du réseau avec Zenmap
 Il est possible d'utiliser un **"slow comprehensive scan"** via Zenmap.
 Cette commande est à utiliser avec Zenmap pour plus de praticité. Le scan peut durer plusieurs dizaines de minutes.
 
@@ -219,10 +220,8 @@ Un message affichera la reussite si un port est ouvert.
 # 2. Utilisation avancée
 <span id="utilisation-avancee"></span>
 
-
-
-
-
+## nmap avancé
+<span id="nmap-avance"></span>
 
 ## Utilisation de script avec nmap
 
@@ -231,11 +230,12 @@ Il est possible de préparer un script pour choisir son type de scan
 
 
 
-# Utilisation avancée netact
+## netact avancée
+<span id="netcat-avance"></span>
 
 
 
 
 
-# 3. FAQ
-<span id="faq"></span>
+# 3. Pour les pros
+<span id="pour-les-pros"></span>
