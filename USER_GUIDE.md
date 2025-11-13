@@ -285,7 +285,7 @@ Les utilisations de netcat dans le réseau sont très variées et peuvent être 
 
 | Raison | Explication |
 | ------ | ----------- |
-| Sécurité / Forensic | Un fichier image est une copie bit-à-bit exacte |
+| Sécurité | Un fichier image est une copie bit-à-bit exacte |
 | Archivage | "Tu peux stocker, compresser, chiffrer, hasher le fichier" |
 | Portabilité | "Tu peux le copier sur un NAS, cloud, USB" |
 | Vérification d’intégrité | md5sum backup.img → 100 % fiable |
@@ -301,15 +301,15 @@ Les utilisations de netcat dans le réseau sont très variées et peuvent être 
 ## Metasploit
 <span id="metasploit"></span>
 
-**Les modules**
+## Les modules
 
-Les modules Metasploit, sont des composants scripts en Ruby permettant diverses actions de tests d’intrusion comme l’exploitation de vulnérabilités, la collecte d’informations, ou la post-exploitation. L’utilisation d’un module suit une logique précise au sein de la console Metasploit (msfconsole), commune sur toutes les distributions Linux, dont Ubuntu.​
+Les modules Metasploit, sont des composants scripts en Ruby ( language ) permettant diverses actions de tests d’intrusion comme l’exploitation de vulnérabilités, la collecte d’informations, ou la post-exploitation. L’utilisation d’un module suit une logique précise au sein de la console Metasploit (CMD = msfconsole), commune sur toutes les distributions Linux, dont Ubuntu.​
 
 Types de modules Metasploit  
 Exploit : permet de tirer parti d'une vulnérabilité pour tenter d'exécuter un code arbitraire à distance.​
 
 Payload : code envoyé lors de l’exploitation pour, par exemple, ouvrir un shell ou créer un utilisateur.​
 
-Auxiliary : outils complémentaires de scan, fuzzing, brute force, ou DoS, souvent utilisés en phase de reconnaissance.​
+Auxiliary : outils complémentaires de scan, brute force, ou DoS, souvent utilisés en phase de reconnaissance.​
 
 Post : modules destinés aux actions post-compromission, comme l’extraction de mots de passe.
