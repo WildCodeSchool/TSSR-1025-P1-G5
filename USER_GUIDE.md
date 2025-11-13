@@ -231,7 +231,7 @@ Il est possible de préparer un script pour choisir son type de scan
 
 
 
-## netact avancée
+## netcat avancée
 <span id="netcat-avance"></span>
 
 
