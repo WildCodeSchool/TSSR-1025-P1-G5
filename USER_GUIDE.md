@@ -154,7 +154,24 @@ Si l'on s'intéresse à notre machine sous Debian (172.16.10.6)
 ## netcat
 <span id="netcat"></span>
 
+## Utilisation
 
+`nc [options] [hôte] [port]`
+
+## Quelques options
+
+| Option | Description |
+| ------ | ----------- |
+| -l | Mode écoute (serveur) |
+| -p | Port source (quand en écoute) |
+| -u | Mode UDP (par défaut TCP) |
+| -v | Mode verbeux |
+| -z | Mode scan (pas de données) |
+| -n | Pas de résolution DNS |
+| -k | Garder le serveur actif après déconnexion (OpenBSD) |
+| -e | Exécuter un programme après connexion |
+| -w | Timeout en secondes |
+| -s | Adresse source |
 
 ## Communiquer du texte entre deux machines
 Dans cet exemple la première machine client (en écoute) est sur Ubuntu. Tapez la commande :
@@ -234,8 +251,42 @@ Il est possible de préparer un script pour choisir son type de scan
 ## netcat avancée
 <span id="netcat-avance"></span>
 
+Les utilisations de netcat dans le réseau sont très variées et peuvent être très utiles pour les **pentesteur** voici quelques exemples de commandes plus poussés.
 
+## Copie de disque 
 
+### Source
+
+`dd if=/dev/sda1 bs=4M | nc 192.168.1.100 4444`
+
+### Explication
+
+     * dd = copie des données ( dd = data duplicator )
+     * bs=4M = BlockSize 4Mo -> Transfert plus rapide
+     * nc ( IP ) 4444 = ouverture du port 4444
+
+### Destination
+
+`nc -l -p 4444 | dd of=backup_sda1.img bs=4`
+
+### Explication
+
+     * nc -l -p 4444 = Ecoute sur le port 4444
+     * dd = copie des données ( dd = data duplicator )
+     * backup_sda1.img = Créer un fichier image du disque.
+
+### Pourquoi en faire une image, plutôt que copier sur disque ?
+
+| Raison | Explication |
+| ------ | ----------- |
+| Sécurité / Forensic | Un fichier image est une copie bit-à-bit exacte |
+| Archivage | "Tu peux stocker, compresser, chiffrer, hasher le fichier" |
+| Portabilité | "Tu peux le copier sur un NAS, cloud, USB" |
+| Vérification d’intégrité | md5sum backup.img → 100 % fiable |
+| Analyse ultérieure | "Ouvre avec foremost, autopsy, xmount → récupération de fichiers supprimés" |
+| Pas de risque d’écraser un disque | Si tu te trompes de /dev/sdb → catastrophe |
+
+##
 
 
 # 3. Pour les pros
