@@ -8,6 +8,7 @@
       * [nmap avancé](#nmap-avance)
       * [netcat avancé](#netcat-avance)
 3. [Pour les pros](#pour-les-pros)
+      * [Metasploit](#metasploit)
 
 
 # 1. Utilisation de base
@@ -239,3 +240,6 @@ Il est possible de préparer un script pour choisir son type de scan
 
 # 3. Pour les pros
 <span id="pour-les-pros"></span>
+
+## Metasploit
+<span id="metasploit"></span>
