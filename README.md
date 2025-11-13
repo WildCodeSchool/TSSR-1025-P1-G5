@@ -91,8 +91,8 @@ Exemples classiques :
 
 | Membre   | Rôle       | Missions |
 | -------- | ---------- | -------- |
-| P-J      | SM         | Gestion  |
-| Romain   | PO         | Communication |
+| P-J      | SM         | Communication |
+| Romain   | PO         | Gestion  |
 | membre 3 | Technicien | -        |
 | membre 4 | Technicien | -        |
 
