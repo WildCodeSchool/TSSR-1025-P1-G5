@@ -7,6 +7,9 @@
 # 1. Prérequis techniques
 
 <span id="prerequis-techniques"></span>
+
+
+
 Nmap est disponible sur la plupart des plateformes, Netcat est un outil intégré à Nmap. Ncat est le nom sur Windows de Netcat.
 
 # 2. Installation sur le client

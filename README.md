@@ -74,6 +74,7 @@ Exemples classiques :
 
   * Scanner les ports de plusieurs machines
   * Récupérer le maximum d'infos
+  * Trouver des failles de sécurité
 
 # 👥 Membres du groupe par sprint
 <span id="membres-du-groupe-par-sprint"></span>
@@ -90,10 +91,10 @@ Exemples classiques :
 
 | Membre   | Rôle       | Missions |
 | -------- | ---------- | -------- |
-| membre 1 | Technicien | -        |
-| membre 2 | Technicien | -        |
-| membre 3 | PO         | -        |
-| membre 4 | SM         | -        |
+| P-J      | SM         | -        |
+| Romain   | PO         | -        |
+| membre 3 | Technicien | -        |
+| membre 4 | Technicien | -        |
 
 # ⚙️ Choix techniques
 <span id="choix-techniques"></span>
