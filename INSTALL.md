@@ -1,19 +1,29 @@
 ## Sommaire
 
-1. [Prérequis technique](#prerequis-technique)
+1. [Prérequis techniques](#prerequis-techniques)
 2. [Installation sur le client](#installation-sur-le-client)
 3. [FAQ](#faq)
 
 # 1. Prérequis techniques
-
 <span id="prerequis-techniques"></span>
 
+## Matériels
 
+  * Pour cet exemple, nous avons utilisé 4 VM et nous avons configuré leurs IP pour qu'elles appartiennent au même réseau.
 
-Nmap est disponible sur la plupart des plateformes, Netcat est un outil intégré à Nmap. Ncat est le nom sur Windows de Netcat.
+| VM | Nom | IP | Masque |
+| -- | --- | -- | ------ |
+| Ubuntu | UBU01 | 172.16.10.20 | 255.255.255.0 |
+| Windows 10/11 | WIN01 | 172.16.10.10 | 255.255.255.0 |
+| Serveur Debian | SRVLX01 | 172.16.10.6 | 255.255.255.0 |
+| Serveur Windows | SRVWIN01 | 172.16.10.5 | 255.255.255.0 |
+
+## Logiciels
+
+  * Nmap est disponible sur la plupart des plateformes, Zenmap est un outil intégré à Nmap. 
+  * Netcat est déjà installé sur Ubuntu, Ncat est le nom sur Windows de Netcat.
 
 # 2. Installation sur le client
-
 <span id="installation-sur-le-client"></span>
 
 ## Installation de Nmap sur Ubuntu
@@ -57,8 +67,8 @@ Pour vérifier sa présence utilisez la commande suivante : <br><br>
 
 
 # 3. FAQ
-
 <span id="faq"></span>
+
 * Quelles sont les différences entre Nmap et Netcat ?
 
     * Objectif principal : Netcat est un outil généraliste pour les communications réseau (lire/écrire des données), tandis que Nmap est dédié à l'exploration et au mapping de réseaux (scan et analyse).
