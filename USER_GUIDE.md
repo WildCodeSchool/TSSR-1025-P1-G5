@@ -226,9 +226,15 @@ Un message affichera la reussite si un port est ouvert.
 
 ## Utilisation de script avec nmap
 
-Il est possible de préparer un script pour choisir son type de scan
+Il est possible de préparer un script pour choisir un type de scan et l'effectuer rapidement.  
+Dans un premier temps nous choisisions le type de scan a effectuer puis renseignons la cible. Le scan se lance ensuite.
 
 
+
+| ![scanscript2](Ressources/Scan_script2.png) | ![scanscript1](Ressources/Scan_script1.png) |
+| ------------------------------------------ | ------------------------------------------ |
+
+Sur cet exemple nous lancons un scan discret sur la cible 172.10.10.10.
 
 
 ## netcat avancée
@@ -243,3 +249,16 @@ Il est possible de préparer un script pour choisir son type de scan
 
 ## Metasploit
 <span id="metasploit"></span>
+
+**Les modules**
+
+Les modules Metasploit, sont des composants scripts en Ruby permettant diverses actions de tests d’intrusion comme l’exploitation de vulnérabilités, la collecte d’informations, ou la post-exploitation. L’utilisation d’un module suit une logique précise au sein de la console Metasploit (msfconsole), commune sur toutes les distributions Linux, dont Ubuntu.​
+
+Types de modules Metasploit  
+Exploit : permet de tirer parti d'une vulnérabilité pour tenter d'exécuter un code arbitraire à distance.​
+
+Payload : code envoyé lors de l’exploitation pour, par exemple, ouvrir un shell ou créer un utilisateur.​
+
+Auxiliary : outils complémentaires de scan, fuzzing, brute force, ou DoS, souvent utilisés en phase de reconnaissance.​
+
+Post : modules destinés aux actions post-compromission, comme l’extraction de mots de passe.

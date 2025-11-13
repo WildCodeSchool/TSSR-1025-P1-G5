@@ -16,13 +16,13 @@ read -p "Votre choix de scan (1 à 3): " choix
 
 read -p "Entrez de la cible (adresse IP) ?" cible
 
-# Les choix sont repartis avec la fonction case.
+# Les choix de scan avec leurs options sont repartis avec la fonction case.
 # sudo est obligatoire pour les types de sacn demandés
 
 case $choix in
   1)
     echo "Scan furtif SYN (stealth scan) sur $cible..." 
-    sudo nmap -sS -T2 -Pn "$cible"
+    sudo nmap -sS -T2 "$cible"
     ;;
   2)
     echo "Scan UDP sur $cible..."
