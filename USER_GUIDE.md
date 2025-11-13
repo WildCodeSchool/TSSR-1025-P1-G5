@@ -99,7 +99,7 @@ Par exemple :
 
 
 
-### Communiquer du texte entre deux machines
+## Communiquer du texte entre deux machines
 Dans cet exemple la première machine client (en écoute) est sur Ubuntu. Tapez la commande :
 
 `nc -l -p 1234`
@@ -117,18 +117,7 @@ Il est alors possible possible de "chatter" via le terminal.
 
 ![capture1](Ressources/Capture_1.png)
 
-### Transfert de fichier entre deux machines
-Reprenons la même configuration de deux machines.
-
-Sur la machine en écoute :
-
-`nc -l -p 1234 < fichier_a_envoyer.txt`
-
-Sur la machine distante :
-
-`nc 172.16.10.XXX 1234 > fichier_recu.txt`
-
-### Vérifier si un port est ouvert
+## Vérifier si un port est ouvert
 
 La commande suivante va permettre de scanner une machine en spécifiant le port à vérifier :
 
@@ -147,14 +136,7 @@ ici le scan va s'éffectuer sur les ports 1 à 140.
 ![capture2](Ressources/Capture_2.png)
 
 
-# 2. Utilisation avancée
-<span id="utilisation-avancee"></span>
-
-## netcat avancé
-<span id="netcat-avance"></span>
-
-### Transfert de fichier entre deux machines
-
+## Transfert de fichier entre deux machines
 
 ### Sur la machine qui émet :
 
@@ -166,7 +148,7 @@ ici le scan va s'éffectuer sur les ports 1 à 140.
 |![CMD_netcat_echange_4](Ressources/CMD_netcat_echange_4.PNG)|
 | ---------------------------------------------------------- |
 
-* Vous pouvez constater que le port est bien ouvert.
+* Vous pouvez constater que le port est bien ouvert avec la commande `nmap (IP)`.
 * La connexion peut être établie.
 
 ### Sur la machine qui reçoit :
@@ -177,6 +159,14 @@ ici le scan va s'éffectuer sur les ports 1 à 140.
 
 * La commande `nc 172.16.10.XXX 1234 > fichier_recu.txt` reçoit le fichier depuis le port ouvert.
 * Maintenant que la connexion a été établie d'autres echange peuvent être effectué.
+
+# 2. Utilisation avancée
+<span id="utilisation-avancee"></span>
+
+## netcat avancé
+<span id="netcat-avance"></span>
+
+
 
 
 # 3. FAQ
