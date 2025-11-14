@@ -116,14 +116,14 @@ Exemples classiques :
 # 🧗 Difficultés rencontrées
 <span id="difficultes-rencontrees"></span>
 
-* 1. Installation de Zenmap dificile.
-* 2. Limité par nos connaissances.
+ 1. Installation de Zenmap dificile.
+ 2. Limité par nos connaissances.
 
 # 💡 Solutions trouvées
 <span id="solutions-trouvees"></span>
 
-* 1. Recherche de solutions sur le git-hub du logiciel.
-* 2. Recherches sur internet ou auprès de personnes plus compétentes.
+ 1. Recherche de solutions sur le git-hub du logiciel.
+ 2. Recherches sur internet ou auprès de personnes plus compétentes.
 
 # 🚀 Améliorations possibles
 <span id="ameliorations-possibles"></span>
