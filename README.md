@@ -116,7 +116,7 @@ Exemples classiques :
 # 🧗 Difficultés rencontrées
 <span id="difficultes-rencontrees"></span>
 
- 1. Installation de Zenmap dificile.
+ 1. Installation de Zenmap difficile.
  2. Limité par nos connaissances.
 
 # 💡 Solutions trouvées
